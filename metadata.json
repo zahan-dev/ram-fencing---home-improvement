@@ -1,0 +1,6 @@
+{
+  "name": "RAM Fencing & Home Improvement",
+  "description": "Premier Remodeling, Construction, Fencing, and Home Improvement Services in Plainfield, New Jersey.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

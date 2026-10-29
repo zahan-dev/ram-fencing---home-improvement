@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-sand: #F2F1EF;
+    --gold-light: #F8EAA5;
+    --gold-primary: #EABC48;
+    --gold-dark: #C99723;
+    --charcoal-black: #0F0F0F;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #F2F1EF;
+    color: #111111;
+  }
+
+  body {
+    background-color: #F2F1EF;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* While a full-screen overlay (gallery lightbox / estimate dialog) is open,
+   hide the fixed site header so it can never cover the overlay's own
+   close button and swallow the clicks. */
+body.overlay-open header {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Custom marquee animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* 3D card tilt perspective */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F2F1EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #EABC48;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C99723;
+}
